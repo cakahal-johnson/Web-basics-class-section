@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number||Method</title>
+</head>
+<body>
+    <h2>Number||Method</h2>
+    <h3>toString()</h3>
+    <p>Number method help you work with numbers</p>
+    <p id="ts"></p>
+
+    <h3>toExponential()</h3>
+    <p>Number method help you work with numbers</p>
+    <p id="te"></p>
+
+    <h3>toFixed()</h3>
+    <p>Number method help you work with numbers</p>
+    <p id="tf"></p>
+
+    <h3>toPrecision()</h3>
+    <p>Number method help you work with numbers</p>
+    <p id="tp"></p>
+
+    <h3>Valueof()</h3>
+    <p>Number method help you work with numbers</p>
+    <p id="vo"></p>
+
+    <h3>Converting Variables to Numbers</h3>
+    <li>Number()</li>
+    <li>parseInt()</li>
+    <li>parseFloat()</li>
+    <p>it returns a Boolean</p>
+    <p id="cov"></p>
+
+    <!-- converting Date to number -->
+    <p id="dt"></p>
+
+    <!-- using parseInt() -->
+    <p id="pi"></p>
+
+    <!-- using parseFloat() -->
+    <p id="pf"></p>
+
+    
+
+    <script>
+
+        //toString() method
+        var a = 123;
+        
+        // console.log(a)
+
+        document.getElementById('ts').innerHTML = a.toString() + "<br>" + (123).toString() + "<br>" + (100 + 23).toString() + "<br>" + typeof(a);
+
+        //toExponential
+        // An optional parameter defines the number of digits behind the decimal point
+        let b = 9.656;
+        document.getElementById('te').innerHTML =
+        "the value of B is: " + b + "<br>" +
+        "the Exponential value of B is: "+ b.toExponential() + "<br>" +
+        "converting with 2: " + b.toExponential(2) +"<br>"+
+        "converting with 4: " + b.toExponential(4) +"<br>" +
+        "converting with 6: " + b.toExponential(6) +"<br>"
+
+        //toFixed()
+        var c = 9.656;
+        document.getElementById('tf').innerHTML = 
+        c + "<br>" +
+        c.toFixed() + "<br>" +
+        c.toFixed(0) + "<br>" +
+        c.toFixed(2) + "<br>" + "is a perfect match when working with money " +
+        c.toFixed(4) + "<br>" +
+        c.toFixed(6) 
+
+
+        //toPrecision()
+        // this returns a string, with a number written with a specified lenght:
+        let d = 9.656;
+        document.getElementById('tp').innerHTML = 
+        d + "<br>" +
+        d.toPrecision() + "<br>" +
+        d.toPrecision(2) + "<br>" +
+        d.toPrecision(4) + "<br>" +
+        d.toPrecision(6)
+
+
+        //valueOf()
+        // returns a numbers as a number
+        var e = 123;
+        document.getElementById('vo').innerHTML = 
+        e + "<br>" +
+        (123).valueOf() + "<br>" +
+        (100 + 23).valueOf() + "<br>" +
+        (200 + 23).valueOf() + "<br>" +
+        typeof(e)
+
+        //converting numbers method
+        document.getElementById('cov').innerHTML =
+        Number() + "<br>" +
+        "number with True value returns:  "+ Number(true) + "<br>" +
+        "number with False value returns:  "+ Number(false) + "<br>" +
+        Number("10") + "<br>" +
+        Number(" 10") + "<br>" +
+        Number("10 ") + "<br>" +
+        Number("10.33") + "<br>" +
+        Number("10,33")  + "<br>" +
+        Number("10 33") + "<br>" +
+        Number("johnson") + "<br>" +
+        Date() + "<br>" +
+        Number(Date())
+
+        //converting date to number
+        var f = new Date("2023-03-14")
+        document.getElementById('dt').innerHTML = 
+        f + "<br>" +
+        Number(f)
+
+
+        //using parseInt()
+        // this parse a string and returns a whole number, spaces are allowed. Only the first number is returned
+        document.getElementById('pi').innerHTML = 
+        parseInt() + "<br>" +
+        parseInt("10") + "<br>" +
+        parseInt("10.33") + "<br>" + //
+        parseInt("10 6") + "<br>" +
+        parseInt("10 years") + "<br>" +
+        parseInt("years 10")
+
+
+        //using parseFloat()
+         // this parse a string and returns a number, spaces are allowed. Only the first number is returned
+         let g = 10;
+        document.getElementById('pf').innerHTML = 
+        parseFloat() + "<br>" +
+        parseFloat("10") + "<br>" +
+        parseFloat("10.33") + "<br>" + //
+        parseFloat("10 6") + "<br>" +
+        parseFloat("10 years") + "<br>" +
+        parseFloat("years 10") + "<br>" +
+        parseFloat(g)
+
+        // Number Property
+        
+
+
+
+
+    </script>
+</body>
+</html>

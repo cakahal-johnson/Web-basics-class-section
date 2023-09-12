@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form JS Validation</title>
+</head>
+<style>
+    *
+    {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body
+    {
+        background-color: #222222;
+        font-family: sans-serif, Arial, Helvetica;
+    }
+
+    h3
+    {
+        margin-bottom: .4em;
+        letter-spacing: 4px;
+        color: rgb(121, 121, 44);
+        text-shadow: 1px 1px 5px #ccc;
+    }
+
+    .container
+    {
+        background-color: #D9d9d9;
+        width: 25%;
+        /* height: 95vh; */
+        margin: 20px auto;
+        text-align: center;
+        padding: 1em 1.5em;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px greenyellow;
+
+    }
+
+
+    input, textarea
+    {
+        width: 100%;
+        display: block;
+        border: 1px solid rgb(175, 121, 121);
+        border-radius: 8px;
+        padding: 10px;
+        outline: none;
+        margin-bottom: .6em;
+    }
+
+    span
+    {
+        display: block;
+        text-align: center;
+        font-size: .5em;
+        color: red;
+        position: fixed;
+        margin-top: -2.3em;
+        margin-left: 1.4em;
+    }
+
+    .success
+    {
+        text-align: center;
+        background-color: rgb(63, 168, 63);
+        margin-bottom: .5em;
+        border-radius: 5px;
+        color: #ffffff;
+        padding: 8px;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    input[type='submit']
+    {
+        background-color: rgb(121, 121, 44);
+        border: none;
+        border-radius: 10px;
+        font-weight: bold;
+        letter-spacing: 0.5em;
+        margin-top: 15px;
+    }
+    
+    .errorborder
+    {
+        border: 1px solid red;
+    }
+
+    .successborder
+    {
+        border: 1px solid rgb(60, 228, 60);
+    }
+
+
+
+
+</style>
+
+<body>
+    <section class="container">
+        
+        <h3>Create an Account</h3>
+        <div class="success" id="jomo"></div>
+
+        <form action="#" id="myForm" onsubmit="return validation()" method="GET">
+            
+            <div class="input-field">
+                <input type="Username" placeholder="Username" name="Username" id="username" autocomplete="off">
+                <span id="nameError"></span>
+            </div>
+        
+            <div class="input-field">
+                <input type="subject" placeholder="Subject" name="Subject" id="sub" autocomplete="off">
+                <span id="subError"></span>
+            </div>
+        
+            <div class="input-field">
+                <input type="phone" placeholder="+234-xxxx-xxx-xxx " name="Phone-number" id="phone" autocomplete="off">
+                <span id="phError"></span>
+            </div>
+        
+            <div class="input-field">
+                <input type="text" placeholder="Email@example.com" name="email" id="email" autocomplete="off">
+                <span id="emailError"></span>
+            </div>
+        
+            <div class="input-field">
+                <input type="password" placeholder="Password" name="password" id="password" autocomplete="off">
+                <span id="passError"></span>
+            </div>
+        
+            <div class="input-field">
+                <input type="password" placeholder="Confirm Password" name="password2" id="password2" autocomplete="off">
+                <span id="pass2Error"></span>
+            </div>
+
+            <div class="input-field">
+                <textarea name="comment" id="textArea" placeholder="Comments" cols="30" rows="10"></textarea>
+                <span id="txtAError"></span>
+            </div>
+
+            <div class="input-field">
+                <input type="submit" value="Submit" name="" id="btnSubmit">
+            </div>
+
+        </form>
+    </section>
+
+    <script language="javascript" type="text/javascript">
+        let btn = document.getElementById('btnSubmit');
+
+        function validation(){
+            let user = document.querySelector('#username').value;
+            let subject = document.querySelector('#sub').value;
+            let phone = document.querySelector('#phone').value;
+            let email = document.querySelector('#email').value;
+            let password = document.querySelector('#password').value;
+            let password2 = document.querySelector('#password2').value;
+            let textArea = document.querySelector('#textArea').value;
+            let text = '';
+
+            if (user == ""){
+                text = 'Username cant be empty'
+                nameError.innerHTML = text;
+                document.querySelector('#username').classList.add('errorborder')
+                return false
+            }
+            if(user.length < 5){
+                text = 'Username must be more then 5!'
+                nameError.innerHTML = text;
+                document.querySelector('#username').classList.add('errorborder')
+                return false;
+            }else{
+                nameError.innerHTML = '';
+                document.querySelector('#username').classList.remove('errorborder')
+                document.querySelector('#username').classList.add('successborder')
+                // return false;
+            }
+
+            if (isNaN(phone) || phone.length > 14){
+                text = "Phone Number is required";
+                phError.innerHTML = text;
+                document.getElementById('phone').classList.add('errorborder')
+                return false
+            }else{
+                phError.innerHTML = '';
+                document.querySelector('#phone').classList.remove('errorborder')
+                document.querySelector('#phone').classList.add('successborder')
+            }
+
+            
+            if(phone == ''){
+                text = 'Phone cant be empty'
+                nameError.innerHTML = text;
+                document.querySelector('#phone').classList.add('errorborder')
+                return false
+            }
+           
+            if(email == ''){
+                text = 'email cant be empty'
+                nameError.innerHTML = text;
+                document.querySelector('#email').classList.add('errorborder')
+                return false
+            }
+//  regular expressions 
+
+        /*
+        ASCII character is separated into two part  by "@" symbol
+
+        first part can consist of the following ASCII Characters:
+            Uppercase (A-Z) and lowercase (a-z) letters
+            Digits(0-9)
+            Characters such as: !#$%&'*+-/=?^_`{|}~
+            Character .(period, dot or fullstop) but is should not be the first or last character and should not come one after the other
+
+            The Domain name consist of :
+            letter
+            digits
+            hyphens
+            dots
+
+        
+        */
+            let mailformat = /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/gm
+
+            if (email.value.match(mailformat)){
+                text = "valid  is required";
+                phError.innerHTML = text;
+                document.getElementById('email').classList.add('errorborder')
+                return false
+            }else{
+                phError.innerHTML = '';
+                document.querySelector('#phone').classList.remove('errorborder')
+                document.querySelector('#phone').classList.add('successborder')
+            }
+
+
+
+            document.getElementById('jomo').innerHTML = 'Successfully Registered'
+            return true
+            
+        }
+    </script>
+</body>
+</html>

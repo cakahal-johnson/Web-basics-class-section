@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS|CLASSES</title>
+</head>
+<body>
+    <h3>CSS|CLASSES</h3>
+    <p>ways of handling Css class and ID</p>
+        <li>Css Combinators</li>
+        <li>Css Pseudo-class</li>
+        <li>Css Pseudo-elements</li>
+
+    <h3>Css Combinators</h3>
+    <p>it's just the reletionship b/w the selectors</p>
+
+    <strong>NB: this css selectors can contain more than one simple select. between the simple selectors by including a combinator</strong>
+
+    <h3>we have four different Combinators in CSS</h3>
+        <li>descendant selectors (space)</li>
+        <li>child selectors (>)</li>
+        <li>adjecent sibling selectors (+)</li>
+        <li>general sibling selectors (~)</li>
+
+        <h3>Descendant selctors</h3>
+        <pre>descendant matchs all elements that are descendant of a specified elements</pre>
+        <p>Example: here is when you want tyo target only the li inside a div we descendant type</p>
+            <div class="Des">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere in, sunt quia tenetur minima officiis.</p>
+                <li><p>i'm just here with no action...</p></li>
+                <a href="#">no action here</a>
+            </div>
+            <style>
+                .Des p
+                {
+                    color: red;
+                }
+            </style>
+
+        <h3>Child selectors (>)</h3>
+        <p>The child selector selects all elements that are the children of a specified elements</p>
+        <pre>Example: here is when you want to target all paragraph</pre>
+        <div class="ch">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, suscipit!</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <div><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sunt? Amet at, adipisci quidem obcaecati ex ducimus earum nihil placeat vero, doloremque iure magni et necessitatibus. Illum provident neque minima.</p></div>
+            <p>Lorem, ipsum dolor.</p>
+
+        </div>
+        <style>
+            .ch > div
+            {
+                color: green;
+            }
+        </style>
+
+<h3>Adjecent sibling selectors (+)</h3>
+<p>The selector is used to select an elements that is directly after another specific elements</p>
+<strong>NB: this elements must have the same parents elements, and "adjacent" means "immediately following"</strong>
+<pre>here we target the first Tag: element that are placed immediately after a div elements</pre>
+
+<div class="adj">
+    <div>
+        <p> 1 Lorem ipsum dolor sit amet.</p>
+        <p> 2 Lorem ipsum dolor sit amet.</p>
+    </div>
+    <p> 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, soluta?</p>
+    <p> 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, soluta?</p>
+    <div>
+        <p> 5 Lorem ipsum dolor sit amet.</p>
+        <p> 6 Lorem ipsum dolor sit amet.</p>
+    </div>
+    <p> 7 Lorem ipsum dolor sit amet.</p>
+        <p> 8 Lorem ipsum dolor sit amet.
+</div>
+<style>
+    .adj div + p
+    {
+        color: tomato;
+    }
+</style>
+
+<h3>General sibling selectors (~)</h3>
+<p>This selector selects all element that are sibliing of a specified element</p>
+<pre>Example: here we target tag element that are siblings of another tag elements</pre>
+
+<div class="gen">
+    <p> 1 Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <div>
+        <p> 2 Lorem ipsum dolor sit amet.</p>
+    </div>
+    <p> 3 Lorem, ipsum dolor.</p>
+    <code>Lorem ipsum dolor sit amet consectetur adipisicing elit.</code>
+    <p> 4 Lorem, ipsum dolor.</p>
+</div>
+
+<style>
+    .gen div ~ p
+    {
+        color: blue;
+    }
+</style>
+
+<h2>Css Pseudo-class</h2>
+<p>this is used to define a special state of an elements</p>
+<pre>Example:
+    <caption><ul>
+        <li>where we want to style an events over element by placing a mouses over it</li>
+        <li>where we want to style a Tag, when visited and unvisited links differently</li>
+        <li>when we want to style an element to get focus</li>
+    </ul></caption>
+</pre>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table||Overflow</title>
+</head>
+<style>
+    h3
+    {
+        text-align: center;
+        background: tomato;
+        padding: 5px;
+        color: yellowgreen;
+        text-shadow: 1px 1px 5px #000 ;
+    }
+
+    table{
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+    }
+
+    td, th
+    {
+        border: 1px solid #ccc;
+        padding: 5px;
+
+    }
+
+    tr:nth-child(even)
+    {
+        background-color: beige;
+    }
+
+    th:hover
+    {
+        background-color: yellowgreen;
+        color: #ccc;
+    }
+
+
+    
+
+
+</style>
+<body>
+    <h2>HMTL||TABLE</h2>
+    <p>we start the table as a tag</p>
+    <li>tr tag: is for the table Row for each will also have th as a tag which means Table Header 
+    <br> then the td as tag: is where the table content or data
+    </li>
+
+    <h3>Student Management List</h3>
+    <table>
+        <tr>
+            <th>s/n</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Contact</th>
+        </tr>
+
+        <tr>
+            <td>std:1</td>
+            <td>Cakahal Johnson</td>
+            <td>Web development</td>
+            <td>0762119521</td>
+        </tr>
+
+        <tr>
+            <td>std:2</td>
+            <td>Johnson Doe</td>
+            <td>Web development</td>
+            <td>0762119521</td>
+        </tr>
+
+        <tr>
+            <td>std:3</td>
+            <td>Cakahal Johnson</td>
+            <td>Web development</td>
+            <td>0762119521</td>
+        </tr>
+
+        <tr>
+            <td>std:4</td>
+            <td>Cakahal Johnson</td>
+            <td>Web development</td>
+            <td>0762119521</td>
+        </tr>
+
+        <tr>
+            <td>std:4</td>
+            <td>Cakahal Johnson</td>
+            <td>Web development</td>
+            <td>0762119521</td>
+        </tr>
+
+        <tr>
+            <td>std:4</td>
+            <td>Cakahal Johnson</td>
+            <td>Web development</td>
+            <td>0762119521</td>
+        </tr>
+
+        <tr>
+            <td>std:4</td>
+            <td>Cakahal Johnson</td>
+            <td>Web development</td>
+            <td>0762119521</td>
+        </tr>
+
+        <tr>
+            <td>std:4</td>
+            <td>Cakahal Johnson</td>
+            <td>Web development</td>
+            <td>0762119521</td>
+        </tr>
+    </table>
+    <br> <br>
+    <h3>Another Table</h3>
+    <table>
+        <tr>
+            <th>s/n</th>
+            <th colspan="2">Name</th>
+            <th>Course</th>
+            <th rowspan="6">Contact</th>
+            <th>Result</th>
+        </tr>
+
+        <tr>
+            <td>std:1</td>
+            <td>Cakahal Johnson</td>
+            <td>Web development</td>
+            <td>0762119521</td>
+            <td>F9</td>
+        </tr>
+
+        <tr>
+            <td>std:2</td>
+            <td>Johnson Doe</td>
+            <td>Web development</td>
+            <td>0762119521</td>
+            <td>F9</td>
+
+        </tr>
+
+        <tr>
+            <td>std:3</td>
+            <td>Cakahal Johnson</td>
+            <td>Web development</td>
+            <td>0762119521</td>
+            <td>F9</td>
+
+        </tr>
+
+        <tr>
+            <td>std:4</td>
+            <td>Cakahal Johnson</td>
+            <td>Web development</td>
+            <td>0762119521</td>
+            <td>F9</td>
+
+        </tr>
+
+        
+    </table>
+
+    <br> <br>
+    <h3>CSS Overflow </h3>
+
+    <div class="inec">
+        <h4 class="headlines">Life is good with beer</h4>
+        <div class="image">
+            <picture>
+
+                <img src="/beer.jpg" width="40%" alt="beer"> <br>
+                <i>|     life with beer</i>
+            </picture>
+        </div>
+
+        <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae natus quam debitis delectus suscipit iure numquam, est veritatis ullam, vel molestias adipisci pariatur incidunt similique, nihil beatae at. Veritatis voluptatem molestiae fuga optio quae ad doloremque numquam, facere deserunt ab, hic magni molestias architecto eos possimus id exercitationem suscipit amet? Error, placeat, inventore corporis consectetur corrupti fuga, dolorum ipsa atque nisi minus consequatur assumenda minima. Fugit, sed rem iure nam inventore reprehenderit voluptatem ipsam. Nisi praesentium labore facere fuga provident quam, sapiente quae vero perferendis recusandae cum atque aliquam laboriosam sed unde. Numquam quae nam amet incidunt impedit in nobis?</p>
+
+        <li>visible: Defaul this is not clipped, conttent renders outside the element's box</li>
+        <li>hidden: this is clipped, and the rest of the conent will be invisible </li>
+        <li>Scroll: is also clipped, and a scrollbar is added to the rest of the content</li>
+        <li>auto: Similar to scroll, but it adds scrollbars only when necessary</li>
+
+        <p><strong>N:B this property only works for block element with a specified height</strong></p>
+    </div>
+
+    <style>
+        #para
+        {
+
+            background-color: #ccc;
+            padding: 5px;
+            text-justify: newspaper;
+            height: 130px;
+            overflow: auto;
+            
+        }
+    </style>
+
+</body>
+</html>

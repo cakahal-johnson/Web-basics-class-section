@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX|MODEL</title>
+</head>
+<body>
+    <h2>BOX|MODEL</h2>
+    <section>
+        <div class="box">
+            <p class="m">Margin</p>
+            <div class="bo">
+                <p class="b">Border</p>
+                <div>
+                    <p class="pd">Padding</p>
+                    <div class="cc">
+                        <p class="c">Content</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<style>
+    .box
+    {
+        background: #ccc;
+        color: #fff;
+        border: 2px dotted beige;
+        text-align: center;
+        padding: 50px;
+    }
+    .m
+    {
+        border: 1px solid #000;
+        background: #333;
+        padding: 30px;
+
+    }
+    .b
+    {
+        border: 1px solid #000;
+        background: #333;
+        padding: 30px;
+
+    }
+    .pd
+    {
+        border: 1px solid #000;
+        background: #333;
+        padding: 30px;
+
+    }
+    .cc
+    {
+        border: 1px solid #000;
+        background: #333;
+        padding: 30px;
+
+    }
+
+    body
+    {
+        margin: 0 10% 50% 20%;
+        /* TOP RIGHT BOTTOM LEFT */
+    }
+
+</style>
+
+<p>this box model is how box can be wrap around every HMTL element. It consists of borders, padding, margins, and the actual content</p>
+
+<li>Content: This is where the text and image appear</li>
+<li>Padding: this clears an area around the content. the padding is transparent</li>
+<li>Border: this goes around the padding and content</li>
+<li>Margin: this clear an area outside the border, The margin is also transparent</li>
+
+<small><strong>The box model allows us to add a border around elements, and to define space between elements</strong></small>
+
+<div class="container model">
+    <p class="marg">Margin</p>
+    <div class="pad">
+        <p class="padd">Padding</p>
+        <div class="con">Content</div>
+    </div>
+</div>
+
+<style>
+    .container 
+    {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .model
+    {
+        border: 2px solid greenyellow;
+        background: beige;
+        padding: 10px;
+        margin: 30px;
+        width: auto;
+
+    }
+
+    .pad
+    {
+        background-color: tan;
+        padding: 20px;
+        margin: 30px;
+        width: auto;
+    }
+
+    .con{
+        background-color: tomato;
+        width: auto;
+        padding: 20px;
+        margin: 30px;
+    }
+</style>
+</body>
+</html>

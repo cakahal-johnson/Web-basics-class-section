@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compatiblity</title>
+</head>
+<body>
+    <h2>Media Queries</h2>
+    <p>it means a way of making a site compatible to all view like tv(big screens), laptop, tablet and mobile </p>
+
+    <p>it can also use to check the width and height of the viewport</p>
+    <p>it can also use to check the width and height of the device</p>
+    <p>also the orientation: landscape or portrail, x and y, vertical and horizontal </p>
+
+    <h3>Media types</h3>
+    <li>all: this is used for all media type devices</li>
+    <li>print: is for printers</li>
+    <li>screen: is where we are which is the mobile laptop tablets</li>
+    <li>speech: is for screenreaders that "reads" the page out loud </li>
+
+
+    <p>example: this will change the Bg-color to any-color if the viewport is 480 pixels wide or wider(if the viewport is less than 480 px, the Bg-color will pick another color-value)</p>
+
+    <style>
+        body
+        {
+            background-color: #000;
+            color: #ccc;
+        }
+
+        @media screen and (min-width: 480px) {
+            body
+            {
+                background-color: #ccc;
+                color: #000;
+            }
+        }
+
+        @media screen and (min-width: 746px) {
+            body
+            {
+                background-color: red;
+                color: #000;
+            }
+
+        }
+
+        @media screen and (min-width: 1020px) {
+            body
+            {
+                background-color: greenyellow;
+                color: #000;
+            }
+        }
+
+        /* @media screen and (max-width: 1020px) {
+            body
+            {
+                background-color: #ccc;
+                color: #000;
+            }
+        }
+
+        @media screen and (min-width: 746px) {
+            body
+            {
+                background-color: red;
+                color: #000;
+            }
+        }
+
+        @media screen and (min-width: 1020px) {
+            body
+            {
+                background-color: greenyellow;
+                color: #000;
+            }
+        } */
+    </style>
+
+
+    <h3>PHP HyperText Preprocessor</h3>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data||Types</title>
+</head>
+<body>
+    <h2>Data||Types</h2>
+    <p>They are ways or concepts in which programming lang. can solve or access data</p>
+    <li> Types of Javascript DataType: </li>
+        <li>Numbers type (operators and Numbers)</li>
+        <li>String type (characters and words)</li>
+        <li>Object (arrays and groups of datas)</li>
+        <p id="num"></p>
+
+
+        <h3>Maths object</h3>
+        <p>these helps or allows you to perform a mathematical tasks on number</p>
+        <p>Exampl: where we have Math.PI it wil return ratio of a circle"s circumference to its diameter</p>
+        <p id="mo"></p>
+        <p id="mo1"></p>
+        <p id="mo2"></p>
+        <p id="mo3"></p>
+        <p id="mo4"></p>
+        <p id="mo5"></p>
+        <p id="mo6"></p>
+        <p id="mo7"></p>
+        <p id="mo8"></p>
+        <p id="mo9"></p>
+        <p id="mo10"></p>
+        <p id="mo11"></p>
+
+        <script>
+            //Maths Operators()
+            document.getElementById('mo').innerHTML = "PI value: " + Math.PI
+            document.getElementById('mo1').innerText = "Euler's raw " + Math.E
+            document.getElementById('mo2').innerHTML = "Square root values: " + Math.SQRT2
+            document.getElementById('mo3').innerHTML = "2Square root values: " + Math.SQRT1_2
+
+            document.getElementById('mo4').innerText = "Log of 2: " + Math.LN2
+
+            document.getElementById('mo5').innerHTML = "Log of 10: " + Math.LN10
+
+            // Math round()
+            console.log(Math.round(5.9))
+            console.log(Math.round(5.4))
+            console.log(Math.round(-5.2))
+
+            // Math ceil()
+            console.log(Math.ceil(5.9))
+            console.log(Math.ceil(5.4))
+            console.log(Math.ceil(-5.2))
+
+                // Floor
+            console.log("Math floor")
+            console.log(Math.floor(5.9))
+            console.log(Math.floor(5.4))
+            console.log(Math.floor(-5.2))
+
+                // Power
+            console.log("Power values:")
+            console.log(Math.pow(8,2))
+            console.log(Math.pow(10,-10))
+
+            // Square root
+            console.log(Math.sqrt(64))
+
+            // Absolute
+            console.log(Math.abs(-4.7))
+
+            // sine and cos
+            document.getElementById('mo6').innerHTML = "The sine of 90 deg is: " + Math.sin(90 * Math.PI / 180)
+
+            // console.log(Math.sin(90))
+
+            // checking lowest value LCM
+            document.getElementById('mo7').innerHTML = Math.min(150,5,20,10,)
+
+            console.log("Random number values")
+            console.log(Math.random)
+            document.getElementById('mo8').innerHTML = Math.random()
+
+            document.getElementById('mo9').innerHTML = Math.floor(Math.random() * 10)
+
+
+
+        </script>
+
+        <script>
+            var f = 15 + 15;
+            var g = "15" + 15;
+            var h = "Result: " + 5;
+
+            document.getElementById('num').innerText = f + "<br>" + g + "<br>" + h;
+            console.log(h)
+            console.log(f)
+            console.log(g)
+
+        </script>
+    <script src="/js/datatype.js"></script>
+
+</body>
+</html>

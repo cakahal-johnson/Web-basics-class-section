@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome||Javascript</title>
+    <link rel="stylesheet" href="">
+</head>
+<style>
+
+</style>
+<body>
+    <h1 id="demo">Welcome to Javascript</h1>
+    <h1 id="dem">Welcome to Javascript</h1>
+    <h1 class="dem">Welcome to Javascript</h1>
+    <h1 class="dem">Welcome to Javascript</h1>
+    <h1 class="dem">Welcome to Javascript</h1>
+
+    <button type="button" onclick="document.getElementById('demo').innerHTML = 'Javascript is so awesome'">
+        click me 
+    </button>
+
+    <p id="hi"></p>
+
+    <button onclick="document.write('hi i am learning js today')">
+        inline script
+    </button>
+
+    <button onclick="document.getElementById('dem').innerHTML = Date()">
+        click me
+    </button>
+    
+    <p id="testing"></p>
+
+    <script>
+        var name = "cakahal johnson";
+        console.log(name)
+
+        document.getElementById('hi').innerText = "hey i'm here"
+        // document.getElementsByClassName('demo').innerText = "hey i'm here"
+
+        var x = document.getElementsByClassName("dem").innerHTML = 'testing a class id';
+        document.getElementById('testing').innerHTML = 'testing the classname' + x[0].innerHTML;
+
+
+
+
+
+    </script>
+    <script src="/js/output.js"></script>
+
+
+</body>
+</html>

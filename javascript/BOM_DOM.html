@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom||Bom</title>
+</head>
+<body>
+
+    <h3>(BOM) Browser Object Model while (DOM) is Document Object Model</h3>
+    <p>whenever a web page is loaded, the browser creates a DocumentObject Model of the page</p>
+    <ul>
+        <pre>List of Document Elements</pre>
+        <li>Root element: ( < HTML >  ) </li>
+        <li>Root element has 2 children: ( < head > and  < body >  ) </li>
+        <li>Head element has 3 or more children: ( < title > and  < Text i.e links >, < meta i.e the logical elements >  ) </li>
+        <li>Body element has attribute and text </li>
+    </ul>
+
+    <h3>With this Object Model Javascript creates a dynamic HTML</h3>
+    <ol>
+        <pre>Things javascript can do:</pre>
+        <li>it can change all HTML element in the page</li>
+        <li>it can change all HTML attributes in the page</li>
+        <li>it can change all the Css style in the page</li>
+        <li>it can remove existing HMTL elemnts and attrribute in the page </li>
+        <li>it can also add new HMTL elements and attributes in the page</li>
+        <li>it can react to all existing Html events in the page i.e call to action eg: button onClick</li>
+        <li>it can create new HTML events on the page</li>
+
+    </ol>
+
+    <h3>DOM Interface</h3>
+    <ul>
+        <li>The HTML element as Objects</li>
+        <li>The properties of all HTML elements</li>
+        <li>The moethods to access all HTML elements</li>
+        <li>The events of all HTML elements</li>
+    </ul>
+
+
+    <h2>BOM Categories</h2>
+    <ol>
+        <li>Js window: window.open() which is used to open a new window, window.close(), window.moveTo(), window.resizeTo()</li>
+
+        <li>js screen: screen.width, screen.height, availWidth, availHeight, colorDepth (24bits = True color, 32bits(Deep color)), pixelDepth</li>
+        <p id="js_screen"></p>
+
+        <li>Locattion(URL): has href(current URL page), hostname (domain name of web host), pathname(current page file path and filename), protocol(returns the web protocol used(http: or https) which also be the ip address, assign() loads a new document </li>
+        <p id="js_location"></p>
+
+        <li>History: contains the browser History it has history.back() which means same as clicking back in the browser and same as forward()</li>
+        <button type="button" value="Back" onclick="goBack()">Back</button>
+
+        <li>Navigator: this object contains information about the visitor's browser, properties: Navigator.appName, navigator.appCodeName, navigator.platform</li>
+        <p id="nav_nav"></p>
+        <p id="nav_an"></p>
+        <p id="nav_acn"></p>
+
+        <li>Js Popup Alert</li>
+        <button type="button" onclick="myAlert()">Alert me</button>
+        <button type="button" onclick="myPrompt()">Prompt me</button>
+        <button type="button" onclick="myConfirm()">confirm me</button>
+        
+    </ol>
+    <li id="popup1"></li>
+    <li style="margin-bottom: 400px;" id="popup2"></li>
+    
+    <script>
+        // window screen example
+        document.getElementById('js_screen').innerHTML = "My own screen size width is: " + screen.availWidth;
+
+        // window location example
+        document.getElementById('js_location').innerHTML = "My Full URL of this page is: <br> " + window.location.href;
+
+        // History example
+        function goBack(){
+            window.history.back()
+            // window.history.forward()
+        }
+
+        // Navigator example
+        // where checking if cookies is enabled which returns a booleans
+        document.getElementById('nav_nav').innerHTML =
+        "navigator.cookieEnabled is: " +
+        navigator.cookieEnabled; 
+
+        // appName 
+        // this returns the apllication name of the browser
+        document.getElementById('nav_an').innerHTML =
+        "navigator.appName is " +
+        navigator.appName;
+
+        //appCodeName, product, appVersion, userAgent
+        //appCodeName returns the code name of the browser
+        document.getElementById('nav_acn').innerHTML =
+        "naigator.appCodeName is: "+
+        navigator.userAgent;
+
+        /*
+        Note:
+        Different browser can use the same name
+        The  navigator data can be changed by the browser owner
+        Some browsers misidentify themselves to bypass site tests
+        Browsers cannot report new operating system, released later than the brower
+
+        navigator.platform returns the browser platform(Operation system)
+        navigator.language returns the browser's language
+        navigator.onLine returns true if the browser is onLine
+        navigator.javaEnabled() returns truen if java is enabled
+
+        */
+
+        // POPup Alerts, Confirm, Prompt
+        // window.alert("javascript is awesome")
+        // alert("javascript is awesome") // window is active by default
+
+        //The alert function
+        function myAlert(){
+            alert("congrats! you won $1billon ")
+        }
+
+        // confirm
+        function myConfirm(){
+            var txt;
+            if(confirm("Press a Button!")){
+                txt ="Ok! i accespted your offere";
+
+            }else{
+                txt = "You pressed Cancel!"
+            }
+
+            document.getElementById('popup1').innerHTML = "You just click "+ txt;
+        }
+
+        // prompt is used as input to the dom
+        function myPrompt(){
+            let Txt;
+            let person = prompt("please enter your Username", "Cakahal Johnson");
+
+            if(person == null || person == ""){
+                Txt = "User cancelled the prompt message!";
+            }else{
+                Txt = "Hello welcome "+ person + "! How are you today";
+            }
+
+            document.getElementById('popup2').innerHTML = Txt;
+        }
+        
+        
+
+
+
+    </script>
+
+
+    
+</body>
+</html>
